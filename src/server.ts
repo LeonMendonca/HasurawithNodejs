@@ -1,4 +1,5 @@
-import { ApolloServer } from "apollo-server";
+import { ApolloServer } from "@apollo/server";
+import { startStandaloneServer } from "@apollo/server/standalone";
 import { typeDefs, resolvers } from "./schema";
 import pg from "pg";
 import { config } from "dotenv";
@@ -22,8 +23,11 @@ const server = new ApolloServer({
   try {
     await connectPg.connect();
     console.log('Connected to Postgres');
-    const url = await server.listen();
-    console.log(`Server listening at ${url.url}`);
+    const { url } = await startStandaloneServer(server, {
+      listen: { port : 4000 }
+    });
+    //const url = await server.listen();
+    console.log(`Server listening at ${url}`);
   } catch(error) {
     if(error instanceof Error) {
       return console.log(error.message);

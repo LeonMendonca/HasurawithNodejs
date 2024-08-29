@@ -1,4 +1,3 @@
-import { gql } from "apollo-server";
 import { Postgres } from "./dbquery";
 
 type Account = {
@@ -37,7 +36,7 @@ type Deposit = {
   depositAmount: number;
 }
 
-const typeDefs = gql`
+const typeDefs = `
   type Error {
     errorMessage : String!
   }

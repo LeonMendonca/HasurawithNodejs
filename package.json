@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "compile": "npx babel -x .ts src/ -d lib/",
-    "dev": "npx nodemon"
+    "dev": "npx nodemon",
+    "start": "node lib/server.js"
   },
   "keywords": [],
   "author": "",

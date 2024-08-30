@@ -201,6 +201,9 @@ const resolvers = {
     withdrawAmount: async (_parent: any, arg: any) => {
       try {
         const { accountid, amount } = arg;
+        if(isNaN(amount)) {
+          throw new Error('Please provide valid amount');
+        }
         const user = await Postgres.getUserByAccountId(accountid);
         if(!user) {
           throw new Error('No user found'); 

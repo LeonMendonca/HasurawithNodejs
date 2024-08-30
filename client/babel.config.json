@@ -1,0 +1,12 @@
+{
+  "presets": [
+    ["@babel/preset-typescript",
+    {
+      "esmodules": "false",
+      "target": "current"
+    }]
+  ],
+  "plugins": [
+    ["add-import-extension"]
+  ]
+}

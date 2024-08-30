@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasura API</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-container">
+            <div class="container">
+                <h3 class="title">Transaction Amount</h3>
+                <div class="input-container">
+                    <input type="text" id="senderaccid" placeholder="Enter sender Account ID" required/>
+                    <input type="text" id="receiveraccid" placeholder="Enter receiver Account ID" required/>
+                    <input type="number" id="amount" placeholder="Enter Amount" required/>
+                    <button id="transaction">Click Me</button>
+                </div>
+            </div>
+        </div>
+        <div class="partition"></div>
+        <div class="right-container">
+            <div id="accounts"></div>
+        </div>
+    </div>
+    <script src="mutation/transaction.js"></script>
+</body>
+</html>
+

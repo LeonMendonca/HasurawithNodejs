@@ -45,7 +45,7 @@ const typeDefs = `
   type Account {
     userid: ID!
     username: String!
-    balance: String!
+    balance: Int!
     accountid: ID!
     wallet: Int!
   }
@@ -60,7 +60,7 @@ const typeDefs = `
   #****************# 
   type User {
     username: String!
-    balance: String!
+    balance: Int!
   } 
 
   union UserError = User | Error
@@ -69,7 +69,7 @@ const typeDefs = `
   #****************# 
   type Wallet {
     message: String!
-    wallet: String!
+    wallet: Int!
   }
   
   union WalletError = Wallet | Error

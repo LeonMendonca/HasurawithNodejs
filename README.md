@@ -88,6 +88,7 @@ cd client
 node lib/server.js
 ```
 - This will start the express server
+
 | Endpoints    | Description                           |
 | ------------ | ------------------------------------- |
 | /            | Get all accounts (requires admin key) |

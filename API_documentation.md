@@ -10,7 +10,7 @@ This API is powered by Apollo Server [docs](https://www.apollographql.com/docs/a
 >`http://localhost:4000`
 # Endpoint
 >`POST http://localhost:4000/`
-# Query Structure
+## Query Structure
 > Root Type : Query
   - To get all Accounts
 ```graphql

@@ -37,9 +37,9 @@ docker ps
 ![Screenshot from 2024-08-28 20-13-22](https://github.com/user-attachments/assets/c51ef426-c33f-4685-864c-c2365a1ea58b)
 - Click on your Created database (in my case its `test`), then `public` and Create table
 ![Screenshot from 2024-08-28 23-07-02](https://github.com/user-attachments/assets/ff4694aa-ce9f-4139-a7c2-ce8226e3ef06)
-- Create a table `accounts` with following columns and its respective types, and default values, as illustrated below. Add primary key to `userid` column
+- Create a table `accounts` with following columns and its respective types (type of username is `chracter varying`, and default values, as illustrated below. Add primary key to `userid` column
 ![Screenshot from 2024-08-28 23-11-41](https://github.com/user-attachments/assets/c853bd2f-5d72-4abe-92ac-9860442a01a4)
-- Click on the `accounts` table, then Insert Row, and add only username, and balance, the rest are default.
+- Click on the `accounts` table, then Insert Row, and insert only username, and balance, the rest are default.
 ![Screenshot from 2024-08-28 23-21-28](https://github.com/user-attachments/assets/066e700c-e707-4baf-b1b3-2d0b4caad98f)
 ---
 ##### Node.js GraphQL setup with GitHub
@@ -49,7 +49,7 @@ git clone https://github.com/LeonMendonca/HasurawithNodejs.git
 cd HasurawithNodejs/
 ```
 - Package Manager `npm` `pnpm` `yarn`. Depends on your choice
-	=>`npm install` or `pnpm intall` or `yarn install`
+	- `npm install` or `pnpm intall` or `yarn install`
 - Run `docker ps` in you terminal, and check the `CONTAINER ID` of postgres container.
 ![Screenshot from 2024-08-29 10-27-29](https://github.com/user-attachments/assets/f260f5d1-8af0-4a75-aaad-2ca87e783d06)
 - Run this command below, to get the postgres container IP address.
@@ -73,11 +73,11 @@ PORT=5432
 ![Screenshot from 2024-08-29 12-08-10](https://github.com/user-attachments/assets/23de53a9-cf8a-40cb-97f3-d611ab564819)
 > Note the IP address (in my case, its `inet 172.17.0.1`)
 - Now, navigate to `http://localhost:8080/console`
-	=> Click on remote schemas, then Add
-	=> Now, Enter **Name** and **GraphQL URL** as shown below 
-	=> URL : `http://<docker-ip-address>:4000`
+	- Click on remote schemas, then Add
+	- Now, Enter **Name** and **GraphQL URL** as shown below 
+	- URL : `http://<docker-ip-address>:4000`
 ![Screenshot from 2024-08-29 12-28-37](https://github.com/user-attachments/assets/b649eab9-abf4-45a8-8381-8f80757f6589)
-  => Then Click Add Remote Schema
+	- Then Click Add Remote Schema
 > **This should add Node.js Schema to the Hasura**
 
 ##### Setting up Client-side

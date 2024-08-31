@@ -33,3 +33,69 @@ query Query {
   }
 }
 ```
+  - To get a single Account
+```graphql
+query Query {
+  getUserByAccountId(id: "<AccountId>") {
+    ... on User {
+      __typename
+      username
+      balance
+    }
+    ... on Error {
+      __typename
+      errorMessage
+    }
+  }
+}
+```
+## Mutation Structure
+>Root type : Mutation
+  - To withdraw amount and store it in wallet
+```graphql
+mutation Mutation {
+  withdrawAmount(accountid: "<AccountId>", amount: 0) {
+    ... on Wallet {
+      __typename
+      message
+      wallet
+    }
+    ... on Error {
+      __typename
+      errorMessage
+    }
+  }
+}
+```
+  - To deposit amount
+```graphql
+mutation Mutation {
+  depositAmount(accountid: "", amount: 10) {
+    ... on Deposit {
+      __typename
+      username
+      depositAmount
+    }
+    ... on Error {
+      __typename
+      errorMessage
+    }
+  }
+}
+```
+  - To perform transaction between 2 users
+```graphql
+mutation Mutation {
+  transactionAmount(amount: 0, receiverAccId: "", senderAccId: "") {
+    ... on Transaction {
+      __typename
+      message
+      transactionAmount
+    }
+    ... on Error {
+      __typename
+      errorMessage
+    }
+  }
+}
+```

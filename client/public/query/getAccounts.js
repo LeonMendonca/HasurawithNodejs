@@ -1,5 +1,19 @@
 const uri = 'http://localhost:8080/v1/graphql';
 
+let counter = 5;
+let intervalId;
+
+function count() {
+  const timer = document.getElementById('timer');
+  timer.innerHTML = counter;
+  counter--;
+
+  if (counter < 0) {
+    clearInterval(intervalId);
+    document.getElementById('accounts').innerHTML = "";
+  }
+}
+
 const getaccountsBtn = document.getElementById('getAccounts')
 getaccountsBtn.addEventListener('click', async (event)=> {
   event.preventDefault();
@@ -8,6 +22,9 @@ getaccountsBtn.addEventListener('click', async (event)=> {
   const div = document.getElementById('accounts');
   const data = await getAccounts(value);
   div.innerHTML = JSON.stringify(data);
+  
+  counter = 5;
+  intervalId = setInterval(count, 1000);
 });
 
 //secret key - 0786d52f

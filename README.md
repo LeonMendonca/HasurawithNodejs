@@ -3,8 +3,9 @@
 >**Disclaimer** - Please avoid using WSL, as Docker runs very slowly on it
 ##### Prerequisites
 - **docker**
-	=> [Install docker for Linux](https://docs.docker.com/engine/install/)
-	=> [Install docker for Mac](https://docs.docker.com/desktop/install/mac-install/)
+-  	
+ - [Install docker for Linux](https://docs.docker.com/engine/install/)
+ - [Install docker for Mac](https://docs.docker.com/desktop/install/mac-install/)
 - **node.js** => [Install node.js](https://nodejs.org/en/download/package-manager)
 
 ##### Install Hasura with Docker

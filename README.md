@@ -48,6 +48,9 @@ docker ps
 git clone https://github.com/LeonMendonca/HasurawithNodejs.git
 cd HasurawithNodejs/
 ```
+- Package Manager `npm` `pnpm` `yarn`. Depends on your choice
+	=>`npm install` or `pnpm intall` or `yarn install`
+- Run `docker ps` in you terminal, and check the `CONTAINER ID` of postgres container.
 ![Screenshot from 2024-08-29 10-27-29](https://github.com/user-attachments/assets/f260f5d1-8af0-4a75-aaad-2ca87e783d06)
 - Run this command below, to get the postgres container IP address.
 ```bash
@@ -75,4 +78,20 @@ PORT=5432
 	=> URL : `http://<docker-ip-address>:4000`
 ![Screenshot from 2024-08-29 12-28-37](https://github.com/user-attachments/assets/b649eab9-abf4-45a8-8381-8f80757f6589)
   => Then Click Add Remote Schema
-**This should add Node.js Schema to the Hasura**
+> **This should add Node.js Schema to the Hasura**
+
+##### Setting up Client-side
+> Base URL : `http://locahost:3000`
+- Client-side is basically just an express server, serving static contents
+```bash
+cd client
+node lib/server.js
+```
+- This will start the express server
+| Endpoints    | Description                           |
+| ------------ | ------------------------------------- |
+| /            | Get all accounts (requires admin key) |
+| /user        | Get specific user's account           |
+| /withdraw    | Withdraw amount to wallet             |
+| /transaction | Transfer amount to another user       |
+| /deposit     | deposit amount to your account        |

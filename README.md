@@ -94,4 +94,5 @@ node lib/server.js
 | /user        | Get specific user's account           |
 | /withdraw    | Withdraw amount to wallet             |
 | /transaction | Transfer amount to another user       |
-| /deposit     | deposit amount to your account        |
+| /deposit     | Deposit amount to your account        |
+

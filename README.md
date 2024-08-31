@@ -5,7 +5,8 @@
 - **docker** 
  	- [Install docker for Linux](https://docs.docker.com/engine/install/)
  	- [Install docker for Mac](https://docs.docker.com/desktop/install/mac-install/)
-- **node.js** => [Install node.js](https://nodejs.org/en/download/package-manager)
+- **node.js**
+	- [Install node.js](https://nodejs.org/en/download/package-manager)
 
 ##### Install Hasura with Docker
 - **cURL**
